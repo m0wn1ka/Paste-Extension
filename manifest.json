@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "paste extension",
+  "description": "a simple extension where we can paste data bypassing the paste restriction",
+  "version": "1.0",
+  "author" : "Radha mounika pulakhandam",
+  "content_scripts": [
+    {
+      "js": [
+        "cs.js"
+      ],
+    "matches": ["<all_urls>"]
+
+    }
+  ]
+}
