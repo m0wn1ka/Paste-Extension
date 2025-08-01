@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radha - Disable Paste</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4f46e5;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      resize: vertical;
+    }
+
+    .note {
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+  <script>
+    window.onload = () => {
+      const myInput = document.getElementById('myInput');
+      myInput.onpaste = e => {
+        e.preventDefault();
+        alert("Pasting is disabled in this field.");
+      };
+    };
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Paste Disabled Textarea</h1>
+    <p class="note">This site contains a textarea where pasting is disabled using JavaScript.</p>
+
+    <label for="myInput">No Paste Allowed:</label>
+    <textarea id="myInput" placeholder="Try to paste here..."></textarea>
+
+    <label for="regular">Regular Textarea:</label>
+    <textarea id="regular" placeholder="Paste is allowed here..."></textarea>
+  </div>
+</body>
+</html>
